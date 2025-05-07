@@ -1,0 +1,69 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "todo": "Do something nice for someone I care about",
+      "completed": true,
+      "userId": 26
+    },
+    {
+      "id": 2,
+      "todo": "Memorize the fifty states and their capitals",
+      "completed": false,
+      "userId": 48
+    },
+    {
+      "id": 3,
+      "todo": "Watch a classic movie",
+      "completed": false,
+      "userId": 4
+    },
+    {
+      "id": 4,
+      "todo": "Contribute code or a monetary donation to an open-source software project",
+      "completed": false,
+      "userId": 48
+    },
+    {
+      "id": 5,
+      "todo": "Solve a Rubik's cube",
+      "completed": false,
+      "userId": 31
+    },
+    {
+      "todo": "ทำการบ้าน",
+      "completed": false,
+      "userId": 123,
+      "id": 6
+    },
+    {
+      "todo": "ทำการบ้านจ้าาาา",
+      "completed": false,
+      "userId": 123,
+      "id": 7
+    },
+    {
+      "todo": "ทำการบ้านจ้าาาา",
+      "completed": false,
+      "userId": 123,
+      "test": 11222,
+      "id": 8
+    },
+    {
+      "todosss": "kora",
+      "id": 9
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "testuser",
+      "password": "password123"
+    },
+    {
+      "id": 2,
+      "username": "testuser3",
+      "password": "password123"
+    }
+  ]
+}
