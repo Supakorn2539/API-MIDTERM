@@ -1,69 +1,53 @@
 {
   "todos": [
     {
-      "id": 1,
-      "todo": "Do something nice for someone I care about",
+      "id": 2087026,
+      "taskName": "play basketball",
+      "userId": 1,
       "completed": true,
-      "userId": 26
+      "createdAt": "20/05/2568 09:48:02",
+      "updatedAt": "20/05/2568 10:16:30"
     },
     {
-      "id": 2,
-      "todo": "Memorize the fifty states and their capitals",
+      "id": 1181294,
+      "taskName": "play game",
+      "userId": 3,
       "completed": false,
-      "userId": 48
+      "createdAt": "20/05/2568 10:10:52",
+      "updatedAt": null
     },
     {
-      "id": 3,
-      "todo": "Watch a classic movie",
+      "id": 5864557,
+      "taskName": "play tennis",
+      "userId": 3,
       "completed": false,
-      "userId": 4
+      "createdAt": "20/05/2568 10:10:59",
+      "updatedAt": null
     },
     {
-      "id": 4,
-      "todo": "Contribute code or a monetary donation to an open-source software project",
+      "id": 5289837,
+      "taskName": "sleep",
+      "userId": 3,
       "completed": false,
-      "userId": 48
-    },
-    {
-      "id": 5,
-      "todo": "Solve a Rubik's cube",
-      "completed": false,
-      "userId": 31
-    },
-    {
-      "todo": "ทำการบ้าน",
-      "completed": false,
-      "userId": 123,
-      "id": 6
-    },
-    {
-      "todo": "ทำการบ้านจ้าาาา",
-      "completed": false,
-      "userId": 123,
-      "id": 7
-    },
-    {
-      "todo": "ทำการบ้านจ้าาาา",
-      "completed": false,
-      "userId": 123,
-      "test": 11222,
-      "id": 8
-    },
-    {
-      "todosss": "kora",
-      "id": 9
+      "createdAt": "20/05/2568 10:11:08",
+      "updatedAt": null
     }
   ],
   "users": [
     {
       "id": 1,
-      "username": "testuser",
-      "password": "password123"
+      "username": "john doe",
+      "password": "$2b$10$P3w6NM3nPrZo5RBxScieMOo3XByZmig0AtSVl0RJmjlEZNs7fUf4O"
     },
     {
       "id": 2,
-      "username": "testuser3",
-      "password": "password123"
+      "username": "jame doe",
+      "password": "$2b$10$R8rtd1iUaonPn5793/lg8.ZJwSnnwol0qNyCLcSMssA6L0JBCCQDm"
+    },
+    {
+      "id": 3,
+      "username": "jin doe",
+      "password": "$2b$10$ZFFWVgblieGEGWRKFNNTm.3KvYmDonq53hYeLYOLb71VyopZXEH4."
     }
   ]
 }
