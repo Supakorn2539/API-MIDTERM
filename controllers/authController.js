@@ -1,8 +1,6 @@
 const path = require("path");
-const fs = require("fs/promises");
 const jsonServer = require("json-server");
 const router = jsonServer.router(path.join(__dirname, "../db/data.json"));
-const uuid = require("uuid");
 const { hash, comparePassword } = require("../utils/bcrypt");
 const { signJwt } = require("../utils/jwt");
 const CustomError = require("../utils/error/customError");
@@ -56,15 +54,13 @@ exports.login = async (req, res, next) => {
     const isPasswordValid = await comparePassword(password, user.password);
     if (!isPasswordValid) throw new CustomError("username or password is not valid", 401);
     const jwt = signJwt({ id: user.id, username: user.username });
-    res
-      .status(200)
-      .json({
-        message: "Login successful",
-        accessToken: jwt,
-        isLogin: true,
-        isSuccess: true,
-        userId: user.id,
-      });
+    res.status(200).json({
+      message: "Login successful",
+      accessToken: jwt,
+      isLogin: true,
+      isSuccess: true,
+      userId: user.id,
+    });
   } catch (err) {
     next(err);
   }

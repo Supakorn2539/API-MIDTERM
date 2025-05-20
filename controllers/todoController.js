@@ -7,6 +7,7 @@ const {
   HTTP_STATUS_CREATED,
   HTTP_STATUS_NOT_FOUND,
   HTTP_STATUS_NO_CONTENT,
+  HTTP_STATUS_BAD_REQUEST,
 } = require("../constants/httpStatusConstant");
 
 exports.getAllTodo = (req, res, next) => {
@@ -36,7 +37,11 @@ exports.createTodo = (req, res, next) => {
     if (!user) {
       throw new CustomError("user not found", HTTP_STATUS_NOT_FOUND);
     }
-
+    if (req.userId) {
+      if (req.userId !== userId) {
+        throw new CustomError("invalid userId", HTTP_STATUS_BAD_REQUEST);
+      }
+    }
     const todos = router.db.get("todos");
     const id = Math.floor(Math.random() * 10000000);
 
