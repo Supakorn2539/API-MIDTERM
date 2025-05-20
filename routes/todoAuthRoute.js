@@ -89,6 +89,7 @@ todoAuthRoute.get("/", authenticate, getAllTodo);
  *             properties:
  *               taskName:
  *                 type: string
+ *                 minLength: 5
  *                 example: play guitar
  *               userId:
  *                 type: number
@@ -171,6 +172,7 @@ todoAuthRoute.post("/", authenticate, validateCreateTodoBody, createTodo);
  *             properties:
  *               taskName:
  *                 type: string
+ *                 minLength: 5
  *                 example: doing homework
  *               completed:
  *                 type: boolean
