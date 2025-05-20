@@ -130,7 +130,6 @@ todoRoute.get("/:userId", getAllTodo);
  *                   type: boolean
  *                   example: false
  */
-
 todoRoute.post("/", validateCreateTodoBody, createTodo);
 
 /**
@@ -220,7 +219,6 @@ todoRoute.post("/", validateCreateTodoBody, createTodo);
  *                   type: boolean
  *                   example: false
  */
-
 todoRoute.put("/:id", validateUpdateTodoBody, updateTodoById);
 
 /**

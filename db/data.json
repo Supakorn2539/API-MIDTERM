@@ -1,14 +1,6 @@
 {
   "todos": [
     {
-      "id": 2087026,
-      "taskName": "play basketball",
-      "userId": 1,
-      "completed": true,
-      "createdAt": "20/05/2568 09:48:02",
-      "updatedAt": "20/05/2568 10:16:30"
-    },
-    {
       "id": 1181294,
       "taskName": "play game",
       "userId": 3,
@@ -17,19 +9,51 @@
       "updatedAt": null
     },
     {
-      "id": 5864557,
-      "taskName": "play tennis",
-      "userId": 3,
-      "completed": false,
-      "createdAt": "20/05/2568 10:10:59",
-      "updatedAt": null
-    },
-    {
       "id": 5289837,
       "taskName": "sleep",
       "userId": 3,
       "completed": false,
       "createdAt": "20/05/2568 10:11:08",
+      "updatedAt": null
+    },
+    {
+      "id": 3278117,
+      "taskName": "read book",
+      "userId": 2,
+      "completed": false,
+      "createdAt": "20/05/2568 11:06:20",
+      "updatedAt": null
+    },
+    {
+      "id": 5701061,
+      "taskName": "cooking",
+      "userId": 2,
+      "completed": false,
+      "createdAt": "20/05/2568 11:06:27",
+      "updatedAt": null
+    },
+    {
+      "id": 4733486,
+      "taskName": "learn javascript",
+      "userId": 2,
+      "completed": false,
+      "createdAt": "20/05/2568 11:06:56",
+      "updatedAt": null
+    },
+    {
+      "id": 8279905,
+      "taskName": "learn typescript",
+      "userId": 2,
+      "completed": false,
+      "createdAt": "20/05/2568 11:07:03",
+      "updatedAt": null
+    },
+    {
+      "id": 5229780,
+      "taskName": "learn java",
+      "userId": 2,
+      "completed": false,
+      "createdAt": "20/05/2568 11:25:09",
       "updatedAt": null
     }
   ],
@@ -48,6 +72,11 @@
       "id": 3,
       "username": "jin doe",
       "password": "$2b$10$ZFFWVgblieGEGWRKFNNTm.3KvYmDonq53hYeLYOLb71VyopZXEH4."
+    },
+    {
+      "id": 4,
+      "username": "june doe",
+      "password": "$2b$10$84tAL9/oiXhHiVy77OLx4.4LJLzZGGkGj2SHzxBs3TozC.7/QxFYi"
     }
   ]
 }

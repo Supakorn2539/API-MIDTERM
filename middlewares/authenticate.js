@@ -1,16 +1,14 @@
 const CustomError = require("../utils/error/customError");
 const { HTTP_STATUS_UNAUTHORIZED } = require("../constants/httpStatusConstant");
 const { verifyJwt } = require("../utils/jwt");
-const authenticate = (req, res, next) => {
+const authenticate = (req, _res, next) => {
   try {
     const token = req.headers.authorization;
     if (!token || !token.startsWith("Bearer ")) {
       throw new CustomError("jwt malformed", HTTP_STATUS_UNAUTHORIZED);
     }
 
-    console.log(token.split(" ")[1]);
     const decode = verifyJwt(token.split(" ")[1]);
-    console.log(decode);
     req.userId = decode.id;
     next();
   } catch (err) {

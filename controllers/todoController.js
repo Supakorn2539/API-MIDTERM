@@ -28,11 +28,18 @@ exports.getAllTodo = (req, res, next) => {
 };
 
 exports.createTodo = (req, res, next) => {
-  console.log("todo");
   const { taskName, userId } = req.body;
   try {
     if (!taskName || !userId) {
       throw new CustomError("taskName and userId are required", HTTP_STATUS_BAD_REQUEST);
+    }
+
+    const user = router.db
+      .get("users")
+      .find({ id: parseInt(userId) })
+      .value();
+    if (!user) {
+      throw new CustomError("user not found", HTTP_STATUS_NOT_FOUND);
     }
 
     const todos = router.db.get("todos");
@@ -82,7 +89,7 @@ exports.deleteTodoById = (req, res, next) => {
       throw new CustomError("todo not found", HTTP_STATUS_NOT_FOUND);
     }
     todos.remove({ id: parseInt(id) }).write();
-    res.status(HTTP_STATUS_NO_CONTENT).json({ todo: todoToDelete, isSuccess: true });
+    res.status(HTTP_STATUS_NO_CONTENT).json({});
   } catch (err) {
     next(err);
   }
