@@ -62,6 +62,19 @@ const todoAuthRoute = Router();
  *                 isSuccess:
  *                   type: boolean
  *                   example: true
+ *       401:
+ *         description: Unauthorized
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 message:
+ *                   type: string
+ *                   example: Unauthorized
+ *                 isSuccess:
+ *                   type: boolean
+ *                   example: false
  */
 todoAuthRoute.get("/", authenticate, getAllTodo);
 
@@ -136,6 +149,19 @@ todoAuthRoute.get("/", authenticate, getAllTodo);
  *                 message:
  *                   type: string
  *                   example: taskName and userId are required
+ *                 isSuccess:
+ *                   type: boolean
+ *                   example: false
+ *       401:
+ *         description: Unauthorized
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 message:
+ *                   type: string
+ *                   example: Unauthorized
  *                 isSuccess:
  *                   type: boolean
  *                   example: false
@@ -235,6 +261,19 @@ todoAuthRoute.post("/", authenticate, validateCreateTodoBody, createTodo);
  *                 isSuccess:
  *                   type: boolean
  *                   example: false
+ *       401:
+ *         description: Unauthorized
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 message:
+ *                   type: string
+ *                   example: Unauthorized
+ *                 isSuccess:
+ *                   type: boolean
+ *                   example: false
  */
 todoAuthRoute.put("/:id", authenticate, validateUpdateTodoBody, updateTodoById);
 
@@ -262,6 +301,19 @@ todoAuthRoute.put("/:id", authenticate, validateUpdateTodoBody, updateTodoById);
  *     responses:
  *       204:
  *         description: Deleted successfully
+ *       401:
+ *         description: Unauthorized
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 message:
+ *                   type: string
+ *                   example: Unauthorized
+ *                 isSuccess:
+ *                   type: boolean
+ *                   example: false
  *
  *       404:
  *         description: todo not found

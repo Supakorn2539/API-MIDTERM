@@ -5,7 +5,6 @@ const router = jsonServer.router(path.join(__dirname, "../db/data.json"));
 const CustomError = require("../utils/error/customError");
 const {
   HTTP_STATUS_CREATED,
-  HTTP_STATUS_BAD_REQUEST,
   HTTP_STATUS_NOT_FOUND,
   HTTP_STATUS_NO_CONTENT,
 } = require("../constants/httpStatusConstant");
@@ -30,10 +29,6 @@ exports.getAllTodo = (req, res, next) => {
 exports.createTodo = (req, res, next) => {
   const { taskName, userId } = req.body;
   try {
-    if (!taskName || !userId) {
-      throw new CustomError("taskName and userId are required", HTTP_STATUS_BAD_REQUEST);
-    }
-
     const user = router.db
       .get("users")
       .find({ id: parseInt(userId) })
