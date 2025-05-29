@@ -4,6 +4,7 @@ const { verifyJwt } = require("../utils/jwt");
 const authenticate = (req, _res, next) => {
   try {
     const token = req.headers.authorization;
+    console.log(req.headers.authorization);
     if (!token || !token.startsWith("Bearer ")) {
       throw new CustomError("jwt malformed", HTTP_STATUS_UNAUTHORIZED);
     }

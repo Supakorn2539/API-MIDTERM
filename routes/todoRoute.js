@@ -19,6 +19,7 @@ const todoRoute = Router();
  *     summary: Get all todos
  *     tags:
  *       - Todos
+ *     security: []
  *     parameters:
  *       - in: path
  *         name: userId
@@ -70,6 +71,7 @@ todoRoute.get("/:userId", getAllTodo);
  *     summary: Create a new todo
  *     tags:
  *       - Todos
+ *     security: []
  *     requestBody:
  *       required: true
  *       content:
@@ -139,6 +141,7 @@ todoRoute.post("/", validateCreateTodoBody, createTodo);
  *     summary: Update a todo by ID
  *     tags:
  *       - Todos
+ *     security: []
  *     parameters:
  *       - in: path
  *         name: id
@@ -228,6 +231,7 @@ todoRoute.put("/:id", validateUpdateTodoBody, updateTodoById);
  *     summary: Delete a todo by ID
  *     tags:
  *       - Todos
+ *     security: []
  *     parameters:
  *       - in: path
  *         name: id

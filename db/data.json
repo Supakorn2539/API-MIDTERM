@@ -77,6 +77,12 @@
       "id": 4,
       "username": "june doe",
       "password": "$2b$10$84tAL9/oiXhHiVy77OLx4.4LJLzZGGkGj2SHzxBs3TozC.7/QxFYi"
+    },
+    {
+      "id": 5,
+      "username": "todoAdmin",
+      "password": "$2b$10$HdKTf5ynFXxQADMwJqFy9ONn9NN2unp8ZVH.Ohay0v1Oi4CqZH5uu"
     }
-  ]
+  ],
+  "movies": []
 }

@@ -11,6 +11,7 @@ const authRoute = Router();
  *     summary: Register a new user
  *     tags:
  *       - Authentication
+ *     security: []
  *     requestBody:
  *       required: true
  *       content:
@@ -66,6 +67,7 @@ authRoute.post("/register", validateAuthBody, register);
  *     summary: Login a user
  *     tags:
  *       - Authentication
+ *     security: []
  *     requestBody:
  *       required: true
  *       content:

@@ -19,15 +19,9 @@ const todoAuthRoute = Router();
  *   get:
  *     summary: Get all todos
  *     tags:
- *       - Todos
- *     parameters:
- *       - in: header
- *         name: Authorization
- *         required: true
- *         schema:
- *           type: string
- *           example: Bearer your_access_token_here
- *         description: Bearer token for authentication (e.g., Bearer eyJhbGciOi...)
+ *       - [AuthTodos]
+ *     security:
+ *       - bearerAuth: []
  *     responses:
  *       200:
  *         description: OK
@@ -84,15 +78,9 @@ todoAuthRoute.get("/", authenticate, getAllTodo);
  *   post:
  *     summary: Create a new todo
  *     tags:
- *       - Todos
- *     parameters:
- *       - in: header
- *         name: Authorization
- *         required: true
- *         schema:
- *           type: string
- *           example: Bearer your_access_token_here
- *         description: Bearer token for authentication (e.g., Bearer eyJhbGciOi...)
+ *       - [AuthTodos]
+ *     security:
+ *       - bearerAuth: []
  *     requestBody:
  *       required: true
  *       content:
@@ -174,7 +162,9 @@ todoAuthRoute.post("/", authenticate, validateCreateTodoBody, createTodo);
  *   put:
  *     summary: Update a todo by ID
  *     tags:
- *       - Todos
+ *       - [AuthTodos]
+ *     security:
+ *       - bearerAuth: []
  *     parameters:
  *       - in: path
  *         name: id
@@ -182,13 +172,6 @@ todoAuthRoute.post("/", authenticate, validateCreateTodoBody, createTodo);
  *         description: ID of the todo to update
  *         schema:
  *           type: number
- *       - in: header
- *         name: Authorization
- *         required: true
- *         schema:
- *           type: string
- *           example: Bearer your_access_token_here
- *         description: Bearer token for authentication (e.g., Bearer eyJhbGciOi...)
  *     requestBody:
  *       required: true
  *       content:
@@ -283,7 +266,9 @@ todoAuthRoute.put("/:id", authenticate, validateUpdateTodoBody, updateTodoById);
  *   delete:
  *     summary: Delete a todo by ID
  *     tags:
- *       - Todos
+ *       - [AuthTodos]
+ *     security:
+ *       - bearerAuth: []
  *     parameters:
  *       - in: path
  *         name: id
@@ -291,13 +276,6 @@ todoAuthRoute.put("/:id", authenticate, validateUpdateTodoBody, updateTodoById);
  *         description: ID of the todo to delete
  *         schema:
  *           type: number
- *       - in: header
- *         name: Authorization
- *         required: true
- *         schema:
- *           type: string
- *           example: Bearer your_access_token_here
- *         description: Bearer token for authentication (e.g., Bearer eyJhbGciOi...)
  *     responses:
  *       204:
  *         description: Deleted successfully
